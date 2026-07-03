@@ -1,0 +1,101 @@
+/* =============
+CSS RESET
+================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============
+CSS VARIABLES
+================*/
+
+:root {
+  /* Background Colors */
+  --search-bg-color: #ebebeb;
+  --footer-bg-color: #061232;
+
+  /* Font Colors */
+  --primary-font-color: rgba(252, 252, 252);
+  --header-font-color: rgba(252, 252, 252, 0.8);
+  --description-font: #e4e4e7;
+  --form-hover-color: #303133;
+  --footer-link-color: #d6d6d6;
+  --logo-hover-color: #919296;
+  --red-error-color: #fae0e0;
+
+  /* Border Color */
+  --weather-border-style: 1px solid var(--header-font-color);
+  --table-border-style: 2px solid rgba(255, 255, 255, 0.161);
+}
+
+/* =============
+BASE STYLES
+================*/
+body {
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  background-image: linear-gradient(
+    90deg,
+    #0b2265 30%,
+    #0d2673 60%,
+    #0b2265 85%
+  );
+  color: var(--primary-font-color);
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+  appearance: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* =============
+TYPOGRAPHY
+================*/
+h1,
+h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1rem;
+  color: var(--header-font-color);
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 0.5em;
+}

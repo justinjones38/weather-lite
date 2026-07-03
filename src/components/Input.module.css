@@ -1,0 +1,21 @@
+.inputField {
+  margin: 0 auto 1em;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+
+.input {
+  display: block;
+  padding: 0.25em 0.5em;
+}
+
+.select {
+  display: block;
+}
+
+.range {
+  font-size: 0.9rem;
+  margin-right: 0.75em;
+}

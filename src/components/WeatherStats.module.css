@@ -1,0 +1,25 @@
+.container {
+  margin-bottom: 2em;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1.25em;
+}
+
+.card {
+  text-align: center;
+  font-size: 1.4rem;
+  border: var(--weather-border-style);
+  border-radius: 8px;
+}
+
+.header {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

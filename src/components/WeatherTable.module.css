@@ -1,0 +1,13 @@
+.table {
+  width: 98%;
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: var(--weather-border-style);
+  margin-bottom: 1em;
+  padding: 0.25em 0.5em;
+  font-size: 1.1rem;
+}
