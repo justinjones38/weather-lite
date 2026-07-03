@@ -16,8 +16,8 @@ export default function App() {
   });
   const [filteredResults, setFilteredResults] = useState([]);
   const [tempRange, setTempRange] = useState({
-    low: null,
-    high: null,
+    low: -Infinity,
+    high: Infinity,
   });
 
   useEffect(() => {
@@ -67,27 +67,7 @@ export default function App() {
       [key]: value,
     }));
 
-    if (!tempRange.low && !tempRange.high) {
-      setFilteredResults({
-        ...data,
-        hourly: data.hourly.filter((hour) =>
-          hour[key].toLowerCase().includes(value.toLowerCase()),
-        ),
-      });
-      return;
-    }
 
-    if (tempRange.low && !tempRange.high) {
-      setFilteredResults({
-        ...data,
-        hourly: data.hourly.filter(
-          (hour) =>
-            hour[key].toLowerCase().includes(value.toLowerCase()) &&
-            hour.temperature <= tempRange.high,
-        ),
-      });
-      return;
-    }
     setFilteredResults({
       ...data,
       hourly: data.hourly.filter(
@@ -108,6 +88,7 @@ export default function App() {
       [key]: value,
     }));
 
+    
     const { lowTemp, highTemp } = getTempRange(value);
     setTempRange((prev) => ({
       ...prev,
@@ -115,31 +96,6 @@ export default function App() {
       high: highTemp,
     }));
 
-    if (!lowTemp && !highTemp) {
-      setFilteredResults({
-        ...data,
-        hourly: data.hourly.filter((hour) =>
-          hour.timestamp
-            .toLowerCase()
-            .includes(filterText.timestamp.toLowerCase()),
-        ),
-      });
-      return;
-    }
-
-    if (lowTemp && !highTemp) {
-      setFilteredResults({
-        ...data,
-        hourly: data.hourly.filter(
-          (hour) =>
-            hour.timestamp
-              .toLowerCase()
-              .includes(filterText.timestamp.toLowerCase()) &&
-            hour.temperature <= highTemp,
-        ),
-      });
-      return;
-    }
 
     setFilteredResults({
       ...data,
@@ -153,7 +109,8 @@ export default function App() {
       ),
     });
   };
-  console.log(filteredResults);
+
+  
 
   return (
     <div className={styles.container}>
