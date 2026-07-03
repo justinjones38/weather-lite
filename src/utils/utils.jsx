@@ -1,7 +1,7 @@
 export function getTempRange(feeling) {
   switch (feeling) {
     case "frosty":
-      return { lowTemp: "", highTemp: 20 };
+      return { lowTemp: -Infinity, highTemp: 20 };
     case "cold":
       return { lowTemp: 20, highTemp: 40 };
 
@@ -15,9 +15,9 @@ export function getTempRange(feeling) {
       return { lowTemp: 80, highTemp: 100 };
 
     case "unbearable":
-      return { lowTemp: 100, highTemp: "" };
+      return { lowTemp: 100, highTemp: Infinity };
 
     default:
-      return { lowTemp: "", highTemp: "" };
+      return { lowTemp: -Infinity, highTemp: Infinity };
   }
 }
