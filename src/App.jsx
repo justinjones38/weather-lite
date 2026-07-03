@@ -83,7 +83,7 @@ export default function App() {
         hourly: data.hourly.filter(
           (hour) =>
             hour[key].toLowerCase().includes(value.toLowerCase()) &&
-            hour.temperature < tempRange.high,
+            hour.temperature <= tempRange.high,
         ),
       });
       return;
@@ -94,7 +94,7 @@ export default function App() {
         (hour) =>
           hour[key].toLowerCase().includes(value.toLowerCase()) &&
           hour.temperature > tempRange.low &&
-          hour.temperature < tempRange.high,
+          hour.temperature <= tempRange.high,
       ),
     });
   };
@@ -135,7 +135,7 @@ export default function App() {
             hour.timestamp
               .toLowerCase()
               .includes(filterText.timestamp.toLowerCase()) &&
-            hour.temperature < highTemp,
+            hour.temperature <= highTemp,
         ),
       });
       return;
