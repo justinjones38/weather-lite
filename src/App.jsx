@@ -7,7 +7,7 @@ import Input from "./components/Input";
 import { getTempRange } from "./utils/utils";
 import HomePage from "./pages/HomePage";
 import {BrowserRouter, Routes, Route} from "react-router"
-import Layout from "./components/layout/layout";
+import Layout from "./components/layout/Layout";
 
 export default function App() {
   // const [data, setData] = useState(null);
