@@ -1,12 +1,23 @@
-import styles from "./Homepage.module.css"
+import styles from "./Homepage.module.css";
+import { CiSearch } from "react-icons/ci";
 
 export default function HomePage() {
   return (
     <div className={styles.container}>
       <form className={styles.form}>
-        <input type="text" placeholder="Enter a location" id="name" />
-        <button className={styles.btn}>Search</button>
+        <div className={styles.formContainer}>
+          <input
+            type="text"
+            placeholder="Enter a location"
+            id="name"
+            className={styles.input}
+            aria-label="Enter a location"
+          />
+          <button className={styles.btn}>
+            <CiSearch />
+          </button>
+        </div>
       </form>
     </div>
-  )
+  );
 }
