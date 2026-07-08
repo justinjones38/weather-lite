@@ -1,22 +1,20 @@
 import styles from "./WeatherStats.module.css";
 
 export default function WeatherStats({ data }) {
+  console.log(data);
   let totalApparentTemp = 0;
-  let totalRelativeHumidity = 0;
   let totalTemp = 0;
   let totalWindSpeed = 0;
   let totalHourLength = data.hourly.length;
   data.hourly.forEach((hour) => {
     totalTemp += hour.temperature;
     totalApparentTemp += hour.apparentTemperature;
-    totalRelativeHumidity += hour.relativeHumidity;
     totalWindSpeed += hour.windSpeed;
   });
 
   let avgApparentTemp =
     Math.round((100 * totalApparentTemp) / totalHourLength) / 100;
-  let avgRelativeHumidity =
-    Math.round((100 * totalRelativeHumidity) / totalHourLength) / 100;
+
   let avgTemp = Math.round((100 * totalTemp) / totalHourLength) / 100;
   let avgWindSpeed = Math.round((100 * totalWindSpeed) / totalHourLength) / 100;
 
@@ -24,6 +22,12 @@ export default function WeatherStats({ data }) {
     <div className={styles.container}>
       <h2 className={styles.title}>Average weather over the next 24 hours</h2>
       <div className={styles.wrapper}>
+      <div className={styles.card}>
+          <h3 className={styles.header}>City</h3>
+          <p className={styles.value}>
+            {data.city}, {data.admin}
+          </p>
+        </div>
         <div className={styles.card}>
           <h3 className={styles.header}>Average Temperature</h3>
           <p className={styles.value}>
@@ -37,14 +41,6 @@ export default function WeatherStats({ data }) {
           <p className={styles.value}>
             {avgApparentTemp}
             {data.hourly_units.apparentTemperature}
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <h3 className={styles.header}>Average Humidity</h3>
-          <p className={styles.value}>
-            {avgRelativeHumidity}
-            {data.hourly_units.relativeHumidity}
           </p>
         </div>
 

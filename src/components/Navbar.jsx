@@ -20,17 +20,17 @@ export default function Navbar() {
           <IoMdClose className={styles.closeBtn} onClick={() => setIsHamburgerMenuShown(false)} />
           <ul className={styles.navbar}>
             <li className={styles.listItem}>
-              <NavLink to="." className={styles.linkItem}>
+              <NavLink to="." className={styles.linkItem} onClick={() => setIsHamburgerMenuShown(false)}>
                 Search
               </NavLink>
             </li>
-            <li className={styles.listItem}>
-              <NavLink to="#" className={styles.linkItem}>
+            <li className={styles.listItem} onClick={() => setIsHamburgerMenuShown(false)}>
+              <NavLink to="dashboard" className={styles.linkItem}>
                 Dashboard
               </NavLink>
             </li>
 
-            <li className={styles.listItem}>
+            <li className={styles.listItem} onClick={() => setIsHamburgerMenuShown(false)}>
               <NavLink to="#" className={styles.linkItem}>
                 About
               </NavLink>
