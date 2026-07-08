@@ -1,4 +1,4 @@
-import useWindowWidth from "../hooks/useWindowWidth";
+import useWindowWidth from "../../hooks/useWindowWidth";
 import styles from "./WeatherTable.module.css";
 
 export default function WeatherTable({ data }) {
