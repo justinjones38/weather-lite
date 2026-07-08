@@ -26,13 +26,24 @@
   font-size: 2.3rem;
   margin-left: auto;
   transition: 0.3s color;
+  margin-bottom: 1em;
 }
 
 .closeBtn:hover, .closeBtn:focus {
   color: var(--red-error-color)
 }
 
+.listItem {
+  margin-bottom: 1em;
+}
+
 .linkItem {
   color: inherit;
   text-decoration: none;
+  font-size: 2.3rem;
 }
+
+.linkItem:focus, .linkItem:hover {
+  border-bottom: 2px solid var(--primary-font-color);
+}
+

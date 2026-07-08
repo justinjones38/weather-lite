@@ -24,9 +24,17 @@ export default function Navbar() {
                 Search
               </NavLink>
             </li>
-            <NavLink to="#" className={styles.linkItem}>
-              Dashboard
-            </NavLink>
+            <li className={styles.listItem}>
+              <NavLink to="#" className={styles.linkItem}>
+                Dashboard
+              </NavLink>
+            </li>
+
+            <li className={styles.listItem}>
+              <NavLink to="#" className={styles.linkItem}>
+                About
+              </NavLink>
+            </li>
           </ul>
         </div>
       ) : null}
