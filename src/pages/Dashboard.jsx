@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import WeatherStats from "../components/WeatherStats"
 import Input from "../components/Input";
 import WeatherTable from "../components/tables/WeatherTable"
+import { getTempRange } from "../utils/utils";
 
 export default function Dashboard() {
   const {data, loading, error, filteredResults, setFilteredResults} = useOutletContext();
