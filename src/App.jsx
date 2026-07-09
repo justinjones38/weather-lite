@@ -2,6 +2,7 @@ import HomePage from "./pages/HomePage";
 import {BrowserRouter, Routes, Route} from "react-router"
 import Layout from "./components/layout/Layout";
 import Dashboard from "./pages/Dashboard";
+import AboutPage from "./pages/AboutPage";
 
 export default function App() {
 
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="about" element={<AboutPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

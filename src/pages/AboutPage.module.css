@@ -1,0 +1,15 @@
+.container {
+  width: 98%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.description {
+  font-size: 1.25rem;
+}
