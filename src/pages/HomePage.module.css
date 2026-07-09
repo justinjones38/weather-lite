@@ -1,3 +1,8 @@
+.errorMessage {
+  color: var(--red-error-color);
+  text-align: center;
+}
+
 .formContainer {
   display: flex;
   justify-content: center;

@@ -1,14 +1,25 @@
 .inputField {
-  margin: 0 auto 1em;
+  margin: 0 auto;
   font-size: 1.2rem;
   display: flex;
   gap: 2em;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 98%;
 }
 
 .input {
   display: block;
   padding: 0.25em 0.5em;
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
 }
 
 .select {
@@ -18,4 +29,10 @@
 .range {
   font-size: 0.9rem;
   margin-right: 0.75em;
+}
+
+@media (min-width: 600px) {
+  .inputField {
+    flex-direction: row;
+  }
 }

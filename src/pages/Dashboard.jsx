@@ -1,10 +1,20 @@
-import { Link, useNavigate, useOutletContext } from "react-router";
+import { Link, useNavigate, useOutletContext, Navigate } from "react-router";
 import styles from "./Dashboard.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WeatherStats from "../components/WeatherStats"
+import Input from "../components/Input";
+import WeatherTable from "../components/tables/WeatherTable"
 
 export default function Dashboard() {
-  const {data, loading, error} = useOutletContext();
+  const {data, loading, error, filteredResults, setFilteredResults} = useOutletContext();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+  if(!data && !loading || error) {
+    navigate("/", {state: {message: "Please enter a valid city before viewing dashboard"}});
+  }
+  }, [data, loading, error])
+
   const [filterText, setFilterText] = useState({
     timestamp: "",
     select: "",
@@ -76,12 +86,12 @@ export default function Dashboard() {
       {!loading && !error && data ? (
         <>
           <WeatherStats data={data} />
-          {/* <Input
+          <Input
             filterText={filterText}
             handleFilterTextChange={handleFilterTextChange}
             handleFilterSelectChange={handleFilterSelectChange}
           />
-          <WeatherTable data={filteredResults} /> */}
+          <WeatherTable data={filteredResults} />
         </>
       ) : null}
     </div>

@@ -15,6 +15,7 @@ export default function Layout() {
   const handleSubmit = async(e) => {
       e.preventDefault();
       setLoading(true);
+      setError(false);
       navigate("dashboard");
       try {
         const fetchedWeatherData = await fetchWeatherArr(city);
@@ -56,7 +57,7 @@ export default function Layout() {
     <div className={styles.container}>
       <Navbar />
       <div className={styles.contentWrapper}>
-        <Outlet context={{city, setCity, handleSubmit, data, filteredResults, loading, error}} />
+        <Outlet context={{city, setCity, handleSubmit, data, filteredResults, setFilteredResults, loading, error}} />
       </div>
     </div>
   )

@@ -2,6 +2,10 @@
   margin-bottom: 2em;
 }
 
+.title {
+  margin-bottom: 1em;
+}
+
 .wrapper {
   display: grid;
   gap: 1.25em;

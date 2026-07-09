@@ -9,7 +9,7 @@ export default function HomePage() {
   console.log(location);
   return (
     <div className={styles.container}>
-      {location?.state?.message ? <h2>{location.state.message}</h2> : null}
+      {location?.state?.message ? <p className={styles.errorMessage}>{location.state.message}</p> : null}
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formContainer}>
           <input
