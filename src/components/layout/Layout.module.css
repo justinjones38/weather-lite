@@ -1,5 +1,20 @@
+.container {
+  min-height: 100vh;
+}
+
 .contentWrapper {
   width: 98%;
   max-width: 1200px;
-  margin: 0.5em auto;
+  margin: 0.5em auto 0;
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1em;
+  }
+  .contentWrapper {
+    grid-column: 4 / span 8;
+  }
 }

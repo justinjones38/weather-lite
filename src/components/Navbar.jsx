@@ -17,7 +17,7 @@ export default function Navbar() {
           onClick={() => setIsNavbarShown(true)}
         />
       </div>
-      {isNavbarShown || windowWidth >= 600 ? (
+      {isNavbarShown || windowWidth >= 800 ? (
         <div className={styles.navContainer}>
           <IoMdClose
             className={styles.closeBtn}

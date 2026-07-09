@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.7em;
   padding: 0.5em;
+  text-align: center;
 }
 
 .hamburgerButton {
@@ -47,27 +47,34 @@
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
+  .container {
+    grid-column: 1 / span 3;
+    flex-direction: column;
+    justify-content: unset;
+    background-color: var(--navbar-bg-color);
+  }
+
+  .title {
+    margin-bottom: 1em;
+  }
+
   .closeBtn, .hamburgerMenu {
     display: none;
   }
+
 
   .navContainer {
     all: unset;
   }
 
-  .navbar {
-    display: flex;
-    align-items: center;
-    gap: 1.5em;
-  }
 
   .listItem {
-    margin-bottom: 0;
+    margin-bottom: 1.25em;
   }
 
   .linkItem {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 
 }
