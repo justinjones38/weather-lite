@@ -3,6 +3,8 @@ import {BrowserRouter, Routes, Route} from "react-router"
 import Layout from "./components/layout/Layout";
 import Dashboard from "./pages/Dashboard";
 import AboutPage from "./pages/AboutPage";
+import DashboardDetail from "./pages/DashboardDetail";
+import DashboardAuthenticator from "./pages/DashboardAuthenticator";
 
 export default function App() {
 
@@ -12,7 +14,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="dashboard" element={<Dashboard />} />
+            <Route element={<DashboardAuthenticator />}>
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="dashboard/:id" element={<DashboardDetail />} />            
+            </Route>
             <Route path="about" element={<AboutPage />} />
         </Route>
       </Routes>

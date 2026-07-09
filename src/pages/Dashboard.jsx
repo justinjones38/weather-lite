@@ -8,13 +8,8 @@ import { getTempRange } from "../utils/utils";
 
 export default function Dashboard() {
   const {data, loading, error, filteredResults, setFilteredResults} = useOutletContext();
-  const navigate = useNavigate();
+  console.log(data);
 
-  useEffect(() => {
-  if(!data && !loading || error) {
-    navigate("/", {state: {message: "Please enter a valid city before viewing dashboard"}});
-  }
-  }, [data, loading, error])
 
   const [filterText, setFilterText] = useState({
     timestamp: "",
@@ -76,12 +71,6 @@ export default function Dashboard() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Weather Data</h1>
-      {!loading && !data ? (
-        <div className={styles.home}>
-          <h3>Please return home to select a city</h3>
-          <Link to="/" className={styles.homeBtn}>Home</Link>
-          </div>
-      ) : null} 
       {loading ? <h2>Loading...</h2> : null}
       {error ? <h2>Error: Cannot fetch data</h2> : null}
       {!loading && !error && data ? (

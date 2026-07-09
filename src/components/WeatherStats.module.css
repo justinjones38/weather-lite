@@ -16,10 +16,17 @@
   font-size: 1.4rem;
   border: var(--weather-border-style);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .header {
   font-size: 1.6rem;
+}
+
+.value {
+  margin-top: auto;
 }
 
 @media (min-width: 600px) {

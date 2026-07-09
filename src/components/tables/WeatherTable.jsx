@@ -1,5 +1,6 @@
 import useWindowWidth from "../../hooks/useWindowWidth";
 import styles from "./WeatherTable.module.css";
+import { Link } from "react-router";
 
 export default function WeatherTable({ data }) {
   const { windowWidth } = useWindowWidth();
@@ -24,26 +25,27 @@ export default function WeatherTable({ data }) {
         <tbody>
           {data.hourly.map((hour) => (
             <tr key={hour.timestamp}>
-              <td>{hour.timestamp}</td>
-              <td>
-                {hour.temperature}
-                {data.hourly_units.temperature}
-              </td>
-              <td>
-                {hour.apparentTemperature}
-                {data.hourly_units.apparentTemperature}
-              </td>
-              {windowWidth > 600 ? (
-                <>
-                  <td className={styles.col}>
-                    {hour.windSpeed} {data.hourly_units.windSpeed}
-                  </td>
-                  <td className={styles.col}>
-                    {hour.relativeHumidity}
-                    {data.hourly_units.relativeHumidity}
-                  </td>
-                </>
-              ) : null}
+                  <td><Link to={hour.timestamp}>{hour.timestamp}</Link></td>              
+
+                <td>
+                  {hour.temperature}
+                  {data.hourly_units.temperature}
+                </td>
+                <td>
+                  {hour.apparentTemperature}
+                  {data.hourly_units.apparentTemperature}
+                </td>
+                {windowWidth > 600 ? (
+                  <>
+                    <td className={styles.col}>
+                      {hour.windSpeed} {data.hourly_units.windSpeed}
+                    </td>
+                    <td className={styles.col}>
+                      {hour.relativeHumidity}
+                      {data.hourly_units.relativeHumidity}
+                    </td>
+                  </>
+                ) : null}
             </tr>
           ))}
         </tbody>
