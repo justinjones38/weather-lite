@@ -13,6 +13,7 @@ import {
 } from "recharts";
 import WeatherGraphSelect from "./WeatherGraphSelect";
 import { useOutletContext } from "react-router";
+import WeatherGraphSummary from "./WeatherGraphSummary";
 
 export default function WeatherGraph() {
   const {data} = useOutletContext();
@@ -97,7 +98,12 @@ export default function WeatherGraph() {
           />
         </BarChart>
       </div>
+      <div className={styles.graphSummary}>
+        <WeatherGraphSummary graph={graph.line} name="line" />
+        <WeatherGraphSummary graph={graph.bar} name="bar" />
+      </div>
 
+      
     </div>
   );
 }
