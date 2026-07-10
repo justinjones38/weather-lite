@@ -29,7 +29,7 @@ The following **optional** features are implemented:
     - There is a summary of the data under the graphs in the video.
 - [X] The site allows users to toggle between different data visualizations
   - User should be able to use some mechanism to toggle between displaying and hiding visualizations 
-    - There is a select button where you can select which graph do you to shown with different data.
+    - There is a select button where you can select which graph do you to be shown with different data.
 
   
 The following **additional** features are implemented:
