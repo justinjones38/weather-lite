@@ -1,0 +1,27 @@
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.graphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.graphSummary {
+  margin-bottom: 1.25em;
+}
+
+@media (min-width: 700px) {
+  .graphs,
+  .selectContainer {
+    flex-direction: row;
+    align-items: initial;
+  }
+}

@@ -1,0 +1,24 @@
+.table {
+  width: 98%;
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: var(--weather-border-style);
+  margin-bottom: 1em;
+  padding: 0.25em 0.5em;
+  font-size: 1.1rem;
+}
+
+.timestamp {
+  color: var(--footer-link-color);
+  text-decoration: none;
+  transition: 0.3s border-bottom;
+}
+
+.timestamp:focus,
+.timestamp:hover {
+  border-bottom: 2px solid var(--footer-link-color);
+}

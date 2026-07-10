@@ -15,7 +15,7 @@ CSS VARIABLES
 :root {
   /* Background Colors */
   --search-bg-color: #ebebeb;
-  --footer-bg-color: #061232;
+  --navbar-bg-color: #061232;
 
   /* Font Colors */
   --primary-font-color: rgba(252, 252, 252);
@@ -71,6 +71,17 @@ li {
   padding: 0;
 }
 
+svg {
+  display: block;
+}
+
+select:focus,
+select:hover,
+option:focus,
+option:hover {
+  cursor: pointer;
+}
+
 /* =============
 TYPOGRAPHY
 ================*/
@@ -89,7 +100,6 @@ h1 {
 
 h2 {
   font-size: 1.1rem;
-  margin-bottom: 0.5em;
 }
 
 h3 {
