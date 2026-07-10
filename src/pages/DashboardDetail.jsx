@@ -14,7 +14,7 @@ export default function DashboardDetail() {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{data.city}</h2>
+      <h2 className={styles.title}>{data.city}, {data.admin}</h2>
       <div className={styles.contentWrapper}>
           <p className={styles.item}>
             Timestamp: <span>{weatherData.timestamp}</span>

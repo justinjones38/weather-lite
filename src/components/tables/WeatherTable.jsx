@@ -25,7 +25,7 @@ export default function WeatherTable({ data }) {
         <tbody>
           {data.hourly.map((hour) => (
             <tr key={hour.timestamp}>
-                  <td><Link to={hour.timestamp}>{hour.timestamp}</Link></td>              
+                  <td><Link to={hour.timestamp} className={styles.timestamp}>{hour.timestamp}</Link></td>              
 
                 <td>
                   {hour.temperature}
