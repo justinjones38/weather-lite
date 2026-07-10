@@ -1,16 +1,16 @@
 import { Link, useNavigate, useOutletContext, Navigate } from "react-router";
 import styles from "./Dashboard.module.css";
 import { useEffect, useState } from "react";
-import WeatherStats from "../components/WeatherStats"
+import WeatherStats from "../components/WeatherStats";
 import Input from "../components/Input";
-import WeatherTable from "../components/tables/WeatherTable"
+import WeatherTable from "../components/tables/WeatherTable";
 import WeatherGraph from "../components/graphs/WeatherGraph";
 import { getTempRange } from "../utils/utils";
 
 export default function Dashboard() {
-  const {data, loading, error, filteredResults, setFilteredResults} = useOutletContext();
+  const { data, loading, error, filteredResults, setFilteredResults } =
+    useOutletContext();
   console.log(data);
-
 
   const [filterText, setFilterText] = useState({
     timestamp: "",

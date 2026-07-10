@@ -18,6 +18,7 @@ td {
   transition: 0.3s border-bottom;
 }
 
-.timestamp:focus, .timestamp:hover {
+.timestamp:focus,
+.timestamp:hover {
   border-bottom: 2px solid var(--footer-link-color);
 }

@@ -25,27 +25,31 @@ export default function WeatherTable({ data }) {
         <tbody>
           {data.hourly.map((hour) => (
             <tr key={hour.timestamp}>
-                  <td><Link to={hour.timestamp} className={styles.timestamp}>{hour.timestamp}</Link></td>              
+              <td>
+                <Link to={hour.timestamp} className={styles.timestamp}>
+                  {hour.timestamp}
+                </Link>
+              </td>
 
-                <td>
-                  {hour.temperature}
-                  {data.hourly_units.temperature}
-                </td>
-                <td>
-                  {hour.apparentTemperature}
-                  {data.hourly_units.apparentTemperature}
-                </td>
-                {windowWidth > 600 ? (
-                  <>
-                    <td className={styles.col}>
-                      {hour.windSpeed} {data.hourly_units.windSpeed}
-                    </td>
-                    <td className={styles.col}>
-                      {hour.relativeHumidity}
-                      {data.hourly_units.relativeHumidity}
-                    </td>
-                  </>
-                ) : null}
+              <td>
+                {hour.temperature}
+                {data.hourly_units.temperature}
+              </td>
+              <td>
+                {hour.apparentTemperature}
+                {data.hourly_units.apparentTemperature}
+              </td>
+              {windowWidth > 600 ? (
+                <>
+                  <td className={styles.col}>
+                    {hour.windSpeed} {data.hourly_units.windSpeed}
+                  </td>
+                  <td className={styles.col}>
+                    {hour.relativeHumidity}
+                    {data.hourly_units.relativeHumidity}
+                  </td>
+                </>
+              ) : null}
             </tr>
           ))}
         </tbody>

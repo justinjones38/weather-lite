@@ -19,9 +19,9 @@
 }
 
 @media (min-width: 700px) {
-  .graphs, .selectContainer {
+  .graphs,
+  .selectContainer {
     flex-direction: row;
     align-items: initial;
   }
-  
 }

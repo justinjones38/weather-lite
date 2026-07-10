@@ -16,7 +16,7 @@ import { useOutletContext } from "react-router";
 import WeatherGraphSummary from "./WeatherGraphSummary";
 
 export default function WeatherGraph() {
-  const {data} = useOutletContext();
+  const { data } = useOutletContext();
   console.log(data);
 
   const [graph, setGraph] = useState({
@@ -37,24 +37,23 @@ export default function WeatherGraph() {
       <div className={styles.select}>
         <h2 className={styles.title}>Select data for the graphs</h2>
         <div className={styles.selectContainer}>
-        <div className={styles.lineSelect}>
-          <p className={styles.header}>Select line graph data</p>
-          <WeatherGraphSelect
-            graph={graph}
-            handleChange={handleChange}
-            name="line"
-          />
-        </div>
           <div className={styles.lineSelect}>
-          <p className={styles.header}>Select bar graph data</p>
-          <WeatherGraphSelect
-            graph={graph}
-            handleChange={handleChange}
-            name="bar"
-          />
+            <p className={styles.header}>Select line graph data</p>
+            <WeatherGraphSelect
+              graph={graph}
+              handleChange={handleChange}
+              name="line"
+            />
+          </div>
+          <div className={styles.lineSelect}>
+            <p className={styles.header}>Select bar graph data</p>
+            <WeatherGraphSelect
+              graph={graph}
+              handleChange={handleChange}
+              name="bar"
+            />
+          </div>
         </div>
-        </div>
-
       </div>
       <div className={styles.graphs}>
         <LineChart
@@ -70,7 +69,12 @@ export default function WeatherGraph() {
         >
           <XAxis dataKey="timestamp" stroke="white" />
           <YAxis dataKey={graph.line} stroke="white" />
-          <Line type="monotone" dataKey={graph.line} stroke="white" dot={false} />
+          <Line
+            type="monotone"
+            dataKey={graph.line}
+            stroke="white"
+            dot={false}
+          />
         </LineChart>
         <BarChart
           style={{
@@ -102,8 +106,6 @@ export default function WeatherGraph() {
         <WeatherGraphSummary graph={graph.line} name="line" />
         <WeatherGraphSummary graph={graph.bar} name="bar" />
       </div>
-
-      
     </div>
   );
 }

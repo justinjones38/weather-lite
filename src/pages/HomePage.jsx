@@ -4,12 +4,14 @@ import { useState } from "react";
 import { useLocation, useOutletContext } from "react-router";
 
 export default function HomePage() {
-  const {city, setCity, handleSubmit} = useOutletContext();
+  const { city, setCity, handleSubmit } = useOutletContext();
   const location = useLocation();
   console.log(location);
   return (
     <div className={styles.container}>
-      {location?.state?.message ? <p className={styles.errorMessage}>{location.state.message}</p> : null}
+      {location?.state?.message ? (
+        <p className={styles.errorMessage}>{location.state.message}</p>
+      ) : null}
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formContainer}>
           <input

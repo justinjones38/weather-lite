@@ -1,7 +1,9 @@
 export async function fetchWeatherArr(city) {
   const latitude = "34.0522";
   const longitude = "-118.2437";
-  const locationRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en&format=json`);
+  const locationRes = await fetch(
+    `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en&format=json`,
+  );
   const locationData = await locationRes.json();
   const location = locationData.results[0];
 
@@ -10,9 +12,12 @@ export async function fetchWeatherArr(city) {
   );
 
   const response = await data.json();
-  console.log(locationData)
+  console.log(locationData);
   console.log(response);
 
-
-  return {...response, city: locationData.results[0].name, admin: locationData.results[0].admin1}
+  return {
+    ...response,
+    city: locationData.results[0].name,
+    admin: locationData.results[0].admin1,
+  };
 }

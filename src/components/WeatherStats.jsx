@@ -22,7 +22,7 @@ export default function WeatherStats({ data }) {
     <div className={styles.container}>
       <h2 className={styles.title}>Average weather over the next 24 hours</h2>
       <div className={styles.wrapper}>
-      <div className={styles.card}>
+        <div className={styles.card}>
           <h3 className={styles.header}>City</h3>
           <p className={styles.value}>
             {data.city}, {data.admin}
