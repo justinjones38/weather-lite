@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import WeatherStats from "../components/WeatherStats"
 import Input from "../components/Input";
 import WeatherTable from "../components/tables/WeatherTable"
+import WeatherGraph from "../components/graphs/WeatherGraph";
 import { getTempRange } from "../utils/utils";
 
 export default function Dashboard() {
@@ -76,6 +77,7 @@ export default function Dashboard() {
       {!loading && !error && data ? (
         <>
           <WeatherStats data={data} />
+          <WeatherGraph data={data} />
           <Input
             filterText={filterText}
             handleFilterTextChange={handleFilterTextChange}

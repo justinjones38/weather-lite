@@ -75,6 +75,10 @@ svg {
   display: block;
 }
 
+select:focus, select:hover, option:focus, option:hover {
+  cursor: pointer;
+}
+
 
 /* =============
 TYPOGRAPHY
