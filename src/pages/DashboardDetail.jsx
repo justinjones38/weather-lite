@@ -37,7 +37,7 @@ export default function DashboardDetail() {
           </p>
 
           <p className={styles.item}>
-            Visbility: <span>{weatherData.visbility} {data.hourly_units.visbility}</span>
+            Visibility: <span>{weatherData.visibility} {data.hourly_units.visibility}</span>
           </p>
 
           <p className={styles.item}>

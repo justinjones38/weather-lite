@@ -12,9 +12,12 @@ import {
   Bar,
 } from "recharts";
 import WeatherGraphSelect from "./WeatherGraphSelect";
+import { useOutletContext } from "react-router";
 
-export default function WeatherGraph({ data }) {
-  console.log(data.hourly);
+export default function WeatherGraph() {
+  const {data} = useOutletContext();
+  console.log(data);
+
   const [graph, setGraph] = useState({
     line: "temperature",
     bar: "apparentTemperature",

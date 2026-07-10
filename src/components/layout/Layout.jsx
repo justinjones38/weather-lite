@@ -30,7 +30,7 @@ export default function Layout() {
               fetchedWeatherData.hourly.relative_humidity_2m[index],
             windSpeed: fetchedWeatherData.hourly.wind_speed_10m[index],
             windGust: fetchedWeatherData.hourly.wind_gusts_10m[index],
-            visbility: Math.round(fetchedWeatherData.hourly.visibility[index]/5280),
+            visibility: Math.round(fetchedWeatherData.hourly.visibility[index]/5280),
             precipitationProbability: fetchedWeatherData.hourly.precipitation_probability[index]
           })),
           hourly_units: {
@@ -42,7 +42,7 @@ export default function Layout() {
               fetchedWeatherData.hourly_units.relative_humidity_2m,
             windSpeed: fetchedWeatherData.hourly_units.wind_speed_10m,
             windGust: fetchedWeatherData.hourly_units.wind_gusts_10m,
-            visbility: "miles",
+            visibility: "miles",
             precipitationProbability: fetchedWeatherData.hourly_units.precipitation_probability
           },
         };
