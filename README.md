@@ -1,50 +1,47 @@
-# Web Development Project 5 - *Weather Lite App*
+# Web Development Project 6 - *Weather Lite App*
 
 Submitted by: **Justin Jones**
 
-This web app: **A lite weather app that allows you to map through data and filter data baed on temperature and the time stamp**
+This web app: **A lite weather app that allows you to map through data and filter data baed on temperature and the time stamp. You can also search for a city and get a graph of all data**
 
-Time spent: **10** hours spent in total
+Time spent: **14** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **The site has a dashboard displaying a list of data fetched using an API call**
-  - The dashboard should display at least 10 unique items, one per row
-  - The dashboard includes at least two features in each row
-- [X] **`useEffect` React hook and `async`/`await` are used**
-- [X] **The app dashboard includes at least three summary statistics about the data** 
-  - The app dashboard includes at least three summary statistics about the data, such as:
-    - At the top of the page, there is average temperature, average apparent temperature, average humidity, and average wind speed
-- [X] **A search bar allows the user to search for an item in the fetched data**
-  - The search bar **correctly** filters items in the list, only displaying items matching the search query
-  - The list of results dynamically updates as the user types into the search bar
-- [X] **An additional filter allows the user to restrict displayed items by specified categories**
-  - The filter restricts items in the list using a **different attribute** than the search bar 
-  - The filter **correctly** filters items in the list, only displaying items matching the filter attribute in the dashboard
-  - The dashboard list dynamically updates as the user adjusts the filter
-    - As you change the timestamp, it automatically filters based on it.
+- [X] **Clicking on an item in the list view displays more details about it**
+  - Clicking on an item in the dashboard list navigates to a detail view for that item
+  - Detail view includes extra information about the item not included in the dashboard view
+  - The same sidebar is displayed in detail view as in dashboard view
+  - *To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.*
+- [X] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+  -  *To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.*
+- [X] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+  - At least two charts should be incorporated into the dashboard view of the site
+  - Each chart should describe a different aspect of the dataset
+
 
 The following **optional** features are implemented:
 
-- [X] Multiple filters can be applied simultaneously
-  - Both filters can be applied at the same time
-- [X] Filters use different input types
-  - e.g., as a text input, a dropdown or radio selection, and/or a slider
-    - I have a text input and select input
-- [X] The user can enter specific bounds for filter values
-    - In the select button, you have ranges (bounds) that you can filter between temperature
+- [X] The site’s customized dashboard contains more content that explains what is interesting about the data 
+  - e.g., an additional description, graph annotation, suggestion for which filters to use, or an additional page that explains more about the data
+    - There is a summary of the data under the graphs in the video.
+- [X] The site allows users to toggle between different data visualizations
+  - User should be able to use some mechanism to toggle between displaying and hiding visualizations 
+    - There is a select button where you can select which graph do you to shown with different data.
 
+  
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [X] List anything else that you added to improve the site's functionality!
+- Made site responsive
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./src/assets/demo-video.gif' title='Demo Video ' width='' alt='Video Walkthrough' />
+<img src='src/assets/demo-video.gif' title='Weather Lite Demo' width='' alt='Video Walkthrough of lite weather app' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
@@ -56,10 +53,11 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+- Learning how to include graphs in the project.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2026] [Justin Jones]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
