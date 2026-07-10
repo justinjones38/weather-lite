@@ -6,7 +6,7 @@ export async function fetchWeatherArr(city) {
   const location = locationData.results[0];
 
   const data = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,apparent_temperature&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&`,
+    `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,apparent_temperature,precipitation_probability,wind_gusts_10m,visibility&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&`,
   );
 
   const response = await data.json();
