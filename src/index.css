@@ -26,7 +26,7 @@ CSS VARIABLES
   --logo-hover-color: #919296;
   --red-error-color: #fae0e0;
 
-  /* Border Color */
+  /* Border Colors */
   --weather-border-style: 1px solid var(--header-font-color);
   --table-border-style: 2px solid rgba(255, 255, 255, 0.161);
 }
