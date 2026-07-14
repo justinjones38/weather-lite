@@ -2,7 +2,7 @@
 
 Submitted by: **Justin Jones**
 
-This web app: **A lite weather app that allows you to map through data and filter data baed on temperature and the time stamp. You can also search for a city and get a graph of all data**
+This web app: **A lite weather app that allows you to map through data and filter data baed on temperature and the time stamp. You can also search for a city and get a graph of all the weather data**
 
 Time spent: **14** hours spent in total
 
